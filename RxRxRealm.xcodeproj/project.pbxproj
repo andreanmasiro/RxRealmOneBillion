@@ -19,6 +19,11 @@
 		4C3279AF1FED90D40096C471 /* ModelObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279AE1FED90D40096C471 /* ModelObjectService.swift */; };
 		4C3279B21FED92340096C471 /* UIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279B11FED92340096C471 /* UIDGenerator.swift */; };
 		4C3279B51FED93880096C471 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279B41FED93880096C471 /* CountryListViewModel.swift */; };
+		4C4BCFFB1FF56B3C00041970 /* ModelObjectServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFA1FF56B3C00041970 /* ModelObjectServiceTest.swift */; };
+		4C4BCFFD1FF56BC300041970 /* RealmProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */; };
+		4C4BCFFE1FF56BC300041970 /* RealmProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */; };
+		4C4BD0001FF56BF500041970 /* DefaultRealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */; };
+		4C4BD0011FF56BF500041970 /* DefaultRealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */; };
 		4C5B4AF11FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */; };
 		4C5B4AF21FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */; };
 		4C74F3D11FEF04DD00E364F6 /* CountryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */; };
@@ -71,6 +76,9 @@
 		4C3279AE1FED90D40096C471 /* ModelObjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObjectService.swift; sourceTree = "<group>"; };
 		4C3279B11FED92340096C471 /* UIDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDGenerator.swift; sourceTree = "<group>"; };
 		4C3279B41FED93880096C471 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		4C4BCFFA1FF56B3C00041970 /* ModelObjectServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObjectServiceTest.swift; sourceTree = "<group>"; };
+		4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProviderType.swift; sourceTree = "<group>"; };
+		4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRealmProvider.swift; sourceTree = "<group>"; };
 		4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObjectJSON.swift; sourceTree = "<group>"; };
 		4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServiceType.swift; sourceTree = "<group>"; };
 		4C74F3D31FEF058D00E364F6 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 		4C32799C1FED8EA90096C471 /* RxRxRealmTests */ = {
 			isa = PBXGroup;
 			children = (
+				4C4BCFF91FF56B2900041970 /* services */,
 				4C32799D1FED8EA90096C471 /* RxRxRealmTests.swift */,
 				4C32799F1FED8EA90096C471 /* Info.plist */,
 			);
@@ -179,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				4C3279AE1FED90D40096C471 /* ModelObjectService.swift */,
+				4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */,
+				4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */,
 				4C74F3D21FEF057700E364F6 /* countryservice */,
 				4CCD3DF91FF0108300D4ADFC /* cityservice */,
 			);
@@ -201,6 +212,14 @@
 				4CA865BF1FEEEDB800A12EC6 /* country */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		4C4BCFF91FF56B2900041970 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				4C4BCFFA1FF56B3C00041970 /* ModelObjectServiceTest.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 		4C74F3D21FEF057700E364F6 /* countryservice */ = {
@@ -498,11 +517,13 @@
 				4C3279AC1FED90250096C471 /* Country.swift in Sources */,
 				4CCD3DFB1FF0109F00D4ADFC /* CityServiceType.swift in Sources */,
 				4C3279AF1FED90D40096C471 /* ModelObjectService.swift in Sources */,
+				4C4BD0001FF56BF500041970 /* DefaultRealmProvider.swift in Sources */,
 				4CA865BA1FEEECFB00A12EC6 /* City.swift in Sources */,
 				4CA865C21FEEEE0E00A12EC6 /* CityListViewController.swift in Sources */,
 				4C74F3D41FEF058D00E364F6 /* CountryService.swift in Sources */,
 				4CCD3DFE1FF010CF00D4ADFC /* CityService.swift in Sources */,
 				4C3279B21FED92340096C471 /* UIDGenerator.swift in Sources */,
+				4C4BCFFD1FF56BC300041970 /* RealmProviderType.swift in Sources */,
 				4C74F3DE1FEF16B400E364F6 /* CountryDetailViewModel.swift in Sources */,
 				4C74F3D11FEF04DD00E364F6 /* CountryServiceType.swift in Sources */,
 				4C32798B1FED8EA90096C471 /* CountryListViewController.swift in Sources */,
@@ -519,9 +540,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4BCFFE1FF56BC300041970 /* RealmProviderType.swift in Sources */,
+				4C4BCFFB1FF56B3C00041970 /* ModelObjectServiceTest.swift in Sources */,
 				4CA865BD1FEEED2400A12EC6 /* Country.swift in Sources */,
 				4CA865C61FEEEE4600A12EC6 /* CityListViewModel.swift in Sources */,
 				4CA865BE1FEEED2400A12EC6 /* City.swift in Sources */,
+				4C4BD0011FF56BF500041970 /* DefaultRealmProvider.swift in Sources */,
 				4C74F3D71FEF138100E364F6 /* UIDGenerator.swift in Sources */,
 				4CCD3DFF1FF010CF00D4ADFC /* CityService.swift in Sources */,
 				4C5B4AF21FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */,

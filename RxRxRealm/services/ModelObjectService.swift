@@ -20,9 +20,15 @@ enum ServiceError: Error {
 
 struct ModelObjectService<T: ModelObject> {
   
+  private var realmProvider: RealmProviderType
+  
+  init(realmProvider: RealmProviderType) {
+    self.realmProvider = realmProvider
+  }
+  
   private func withRealm<K>(_ operation: String, action: (Realm) throws -> K) -> K? {
     do {
-      let realm = try Realm()
+      let realm = try realmProvider.realm()
       return try action(realm)
     } catch let err {
       print("Failed \(operation) realm with error: \(err)")

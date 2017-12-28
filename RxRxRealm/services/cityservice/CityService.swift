@@ -11,7 +11,7 @@ import RealmSwift
 
 struct CityService: CityServiceType {
   
-  private let service = ModelObjectService<City>()
+  private let service = ModelObjectService<City>(realmProvider: DefaultRealmProvider())
   
   @discardableResult
   func create(object: City) -> Observable<City> {
