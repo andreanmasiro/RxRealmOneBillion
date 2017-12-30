@@ -13,7 +13,6 @@
 		4C32798E1FED8EA90096C471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C32798C1FED8EA90096C471 /* Main.storyboard */; };
 		4C3279901FED8EA90096C471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C32798F1FED8EA90096C471 /* Assets.xcassets */; };
 		4C3279931FED8EA90096C471 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3279911FED8EA90096C471 /* LaunchScreen.storyboard */; };
-		4C32799E1FED8EA90096C471 /* RxRxRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C32799D1FED8EA90096C471 /* RxRxRealmTests.swift */; };
 		4C3279AA1FED8F080096C471 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279A91FED8F080096C471 /* ModelObject.swift */; };
 		4C3279AC1FED90250096C471 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279AB1FED90250096C471 /* Country.swift */; };
 		4C3279AF1FED90D40096C471 /* ModelObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279AE1FED90D40096C471 /* ModelObjectService.swift */; };
@@ -21,32 +20,18 @@
 		4C3279B51FED93880096C471 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279B41FED93880096C471 /* CountryListViewModel.swift */; };
 		4C4BCFFB1FF56B3C00041970 /* ModelObjectServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFA1FF56B3C00041970 /* ModelObjectServiceTest.swift */; };
 		4C4BCFFD1FF56BC300041970 /* RealmProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */; };
-		4C4BCFFE1FF56BC300041970 /* RealmProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */; };
 		4C4BD0001FF56BF500041970 /* DefaultRealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */; };
-		4C4BD0011FF56BF500041970 /* DefaultRealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */; };
+		4C4BD0101FF572D200041970 /* TestRealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */; };
 		4C5B4AF11FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */; };
-		4C5B4AF21FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */; };
 		4C74F3D11FEF04DD00E364F6 /* CountryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */; };
 		4C74F3D41FEF058D00E364F6 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D31FEF058D00E364F6 /* CountryService.swift */; };
-		4C74F3D51FEF059000E364F6 /* CountryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */; };
-		4C74F3D61FEF059000E364F6 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D31FEF058D00E364F6 /* CountryService.swift */; };
-		4C74F3D71FEF138100E364F6 /* UIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279B11FED92340096C471 /* UIDGenerator.swift */; };
 		4C74F3DB1FEF166E00E364F6 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3DA1FEF166E00E364F6 /* CountryDetailViewController.swift */; };
 		4C74F3DE1FEF16B400E364F6 /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3DD1FEF16B400E364F6 /* CountryDetailViewModel.swift */; };
-		4C74F3DF1FEF16B400E364F6 /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3DD1FEF16B400E364F6 /* CountryDetailViewModel.swift */; };
 		4CA865BA1FEEECFB00A12EC6 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865B91FEEECFB00A12EC6 /* City.swift */; };
-		4CA865BC1FEEED2100A12EC6 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279A91FED8F080096C471 /* ModelObject.swift */; };
-		4CA865BD1FEEED2400A12EC6 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279AB1FED90250096C471 /* Country.swift */; };
-		4CA865BE1FEEED2400A12EC6 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865B91FEEECFB00A12EC6 /* City.swift */; };
 		4CA865C21FEEEE0E00A12EC6 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865C11FEEEE0E00A12EC6 /* CityListViewController.swift */; };
-		4CA865C31FEEEE0E00A12EC6 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865C11FEEEE0E00A12EC6 /* CityListViewController.swift */; };
 		4CA865C51FEEEE4600A12EC6 /* CityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865C41FEEEE4600A12EC6 /* CityListViewModel.swift */; };
-		4CA865C61FEEEE4600A12EC6 /* CityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865C41FEEEE4600A12EC6 /* CityListViewModel.swift */; };
-		4CA865C71FEEF3E800A12EC6 /* ModelObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3279AE1FED90D40096C471 /* ModelObjectService.swift */; };
 		4CCD3DFB1FF0109F00D4ADFC /* CityServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFA1FF0109F00D4ADFC /* CityServiceType.swift */; };
-		4CCD3DFC1FF010A100D4ADFC /* CityServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFA1FF0109F00D4ADFC /* CityServiceType.swift */; };
 		4CCD3DFE1FF010CF00D4ADFC /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFD1FF010CF00D4ADFC /* CityService.swift */; };
-		4CCD3DFF1FF010CF00D4ADFC /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFD1FF010CF00D4ADFC /* CityService.swift */; };
 		683619284D4E434DA43D818B /* Pods_RxRxRealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED96E354D09519CECE623AD /* Pods_RxRxRealmTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +54,6 @@
 		4C3279921FED8EA90096C471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C3279941FED8EA90096C471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C3279991FED8EA90096C471 /* RxRxRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxRxRealmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C32799D1FED8EA90096C471 /* RxRxRealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRxRealmTests.swift; sourceTree = "<group>"; };
 		4C32799F1FED8EA90096C471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C3279A91FED8F080096C471 /* ModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
 		4C3279AB1FED90250096C471 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -79,6 +63,7 @@
 		4C4BCFFA1FF56B3C00041970 /* ModelObjectServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObjectServiceTest.swift; sourceTree = "<group>"; };
 		4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProviderType.swift; sourceTree = "<group>"; };
 		4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRealmProvider.swift; sourceTree = "<group>"; };
+		4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRealmProvider.swift; sourceTree = "<group>"; };
 		4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObjectJSON.swift; sourceTree = "<group>"; };
 		4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServiceType.swift; sourceTree = "<group>"; };
 		4C74F3D31FEF058D00E364F6 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
@@ -167,8 +152,8 @@
 		4C32799C1FED8EA90096C471 /* RxRxRealmTests */ = {
 			isa = PBXGroup;
 			children = (
+				4C4BD0021FF56D7D00041970 /* mocks */,
 				4C4BCFF91FF56B2900041970 /* services */,
-				4C32799D1FED8EA90096C471 /* RxRxRealmTests.swift */,
 				4C32799F1FED8EA90096C471 /* Info.plist */,
 			);
 			path = RxRxRealmTests;
@@ -220,6 +205,14 @@
 				4C4BCFFA1FF56B3C00041970 /* ModelObjectServiceTest.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		4C4BD0021FF56D7D00041970 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */,
+			);
+			path = mocks;
 			sourceTree = "<group>";
 		};
 		4C74F3D21FEF057700E364F6 /* countryservice */ = {
@@ -483,9 +476,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxRxRealmTests/Pods-RxRxRealmTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -540,23 +538,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4BCFFE1FF56BC300041970 /* RealmProviderType.swift in Sources */,
+				4C4BD0101FF572D200041970 /* TestRealmProvider.swift in Sources */,
 				4C4BCFFB1FF56B3C00041970 /* ModelObjectServiceTest.swift in Sources */,
-				4CA865BD1FEEED2400A12EC6 /* Country.swift in Sources */,
-				4CA865C61FEEEE4600A12EC6 /* CityListViewModel.swift in Sources */,
-				4CA865BE1FEEED2400A12EC6 /* City.swift in Sources */,
-				4C4BD0011FF56BF500041970 /* DefaultRealmProvider.swift in Sources */,
-				4C74F3D71FEF138100E364F6 /* UIDGenerator.swift in Sources */,
-				4CCD3DFF1FF010CF00D4ADFC /* CityService.swift in Sources */,
-				4C5B4AF21FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */,
-				4CCD3DFC1FF010A100D4ADFC /* CityServiceType.swift in Sources */,
-				4CA865C71FEEF3E800A12EC6 /* ModelObjectService.swift in Sources */,
-				4C74F3DF1FEF16B400E364F6 /* CountryDetailViewModel.swift in Sources */,
-				4CA865BC1FEEED2100A12EC6 /* ModelObject.swift in Sources */,
-				4C74F3D61FEF059000E364F6 /* CountryService.swift in Sources */,
-				4C74F3D51FEF059000E364F6 /* CountryServiceType.swift in Sources */,
-				4C32799E1FED8EA90096C471 /* RxRxRealmTests.swift in Sources */,
-				4CA865C31FEEEE0E00A12EC6 /* CityListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +719,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BEVC4JDNZX;
 				INFOPLIST_FILE = RxRxRealmTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vergil.RxRxRealmTests;
@@ -753,6 +737,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BEVC4JDNZX;
 				INFOPLIST_FILE = RxRxRealmTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vergil.RxRxRealmTests;

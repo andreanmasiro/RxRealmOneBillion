@@ -20,7 +20,7 @@ enum ServiceError: Error {
 
 struct ModelObjectService<T: ModelObject> {
   
-  private var realmProvider: RealmProviderType
+  private let realmProvider: RealmProviderType
   
   init(realmProvider: RealmProviderType) {
     self.realmProvider = realmProvider
