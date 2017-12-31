@@ -14,6 +14,7 @@ enum ServiceError: Error {
   
   case creationFailed(ModelObject)
   case fetchingFailed
+  case fetchingByIdFailed(String)
   case deletionFailed(ModelObject)
   case updateFailed(ModelObject)
 }
@@ -59,15 +60,15 @@ struct ModelObjectService<T: ModelObject> {
     return results ?? .error(ServiceError.creationFailed(object))
   }
   
-  func allObjects(_ type: T.Type, getDeleted: Bool, filterClosure: ((Results<T>) -> (Results<T>))? = nil) -> Observable<Results<T>> {
+  func allObjects(getDeleted: Bool, filterClosure: ((Results<T>) -> (Results<T>))? = nil) -> Observable<Results<T>> {
     
     let results = withRealm("get all") { realm -> Observable<Results<T>> in
       
       let objects: Results<T>
       if let closure = filterClosure {
-        objects = closure(realm.objects(type))
+        objects = closure(realm.objects(T.self))
       } else {
-        objects = realm.objects(type)
+        objects = realm.objects(T.self)
       }
       
       let filteredObjects: Results<T>
@@ -82,6 +83,20 @@ struct ModelObjectService<T: ModelObject> {
     }
     
     return results ?? .error(ServiceError.fetchingFailed)
+  }
+  
+  func object(withUid uid: String) -> Observable<T> {
+    
+    let results = withRealm("get by id") { realm -> Observable<T> in
+      
+      guard let object = realm.object(ofType: T.self, forPrimaryKey: uid) else {
+        throw ServiceError.fetchingByIdFailed(uid)
+      }
+      
+      return Observable.just(object)
+    }
+    
+    return results ?? .error(ServiceError.fetchingByIdFailed(uid))
   }
   
   @discardableResult

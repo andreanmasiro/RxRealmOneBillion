@@ -92,7 +92,7 @@ class ModelObjectServiceTest: XCTestCase {
     }
     
     guard case let retrievedObjects?? = try? service
-      .allObjects(ModelObject.self, getDeleted: false)
+      .allObjects(getDeleted: false)
       .toBlocking(timeout: 1).first()?.toArray() else {
         XCTFail("retrieving objects failed")
         return
@@ -113,7 +113,7 @@ class ModelObjectServiceTest: XCTestCase {
     _ = service.delete(object: objects[1]).toBlocking().materialize()
     
     guard case let retrievedNonDeletedObjects?? = try? service
-      .allObjects(ModelObject.self, getDeleted: false)
+      .allObjects(getDeleted: false)
       .toBlocking(timeout: 1).first()?.toArray() else {
         XCTFail("retrieving objects failed")
         return
@@ -127,7 +127,7 @@ class ModelObjectServiceTest: XCTestCase {
               "retrieved objects must contain non-deleted objects")
     
     guard case let retrievedObjects?? = try? service
-      .allObjects(ModelObject.self, getDeleted: true)
+      .allObjects(getDeleted: true)
       .toBlocking(timeout: 1).first()?.toArray() else {
         XCTFail("retrieving objects failed")
         return
@@ -167,8 +167,7 @@ class ModelObjectServiceTest: XCTestCase {
     }
     
     guard case let pastObjects?? = try? service
-      .allObjects(ModelObject.self,
-                  getDeleted: false,
+      .allObjects(getDeleted: false,
                   filterClosure: filterPast)
       .toBlocking(timeout: 1).first()?.toArray() else {
         XCTFail("retrieving objects failed")
@@ -185,8 +184,7 @@ class ModelObjectServiceTest: XCTestCase {
     }
     
     guard case let futureObjects?? = try? service
-      .allObjects(ModelObject.self,
-                  getDeleted: false,
+      .allObjects(getDeleted: false,
                   filterClosure: filterFuture)
       .toBlocking(timeout: 1).first()?.toArray() else {
         XCTFail("retrieving objects failed")
@@ -196,5 +194,39 @@ class ModelObjectServiceTest: XCTestCase {
     XCTAssertEqual(futureObjects,
                    Array(objects[3..<5]),
                    "filtered out the past objects") 
+  }
+  
+  func testGetById() {
+    
+    let object = ModelObject()
+    
+    let uid = "some uid"
+    object.uid = uid
+    
+    _ = service.create(object: object).toBlocking().materialize()
+    
+    guard case let foundObject?? = try? service.object(withUid: uid)
+      .toBlocking().first() else {
+        XCTFail("retrieving objects failed")
+        return
+    }
+    
+    XCTAssertEqual(object, foundObject)
+  }
+  
+  func testUpdate() {
+    
+    let object = ModelObject()
+    
+    _ = service.create(object: object).toBlocking().materialize()
+    
+    let now = Date.distantPast
+    
+    _ = service.update(object: object) {
+      object.createdAt = now
+    }
+      .toBlocking().materialize()
+    
+    XCTAssertEqual(now, object.createdAt)
   }
 }

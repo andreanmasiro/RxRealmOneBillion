@@ -27,8 +27,7 @@ struct CityService: CityServiceType {
     } else { filterClosure = nil }
     
     return service
-      .allObjects(City.self,
-                  getDeleted: getDeleted,
+      .allObjects(getDeleted: getDeleted,
                   filterClosure: filterClosure)
       .map { $0.toArray() }
   }

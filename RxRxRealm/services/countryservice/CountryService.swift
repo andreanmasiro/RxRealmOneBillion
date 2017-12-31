@@ -19,7 +19,7 @@ struct CountryService: CountryServiceType {
   }
   
   func allObjects(getDeleted: Bool) -> Observable<[Country]> {
-    return service.allObjects(Country.self, getDeleted: getDeleted)
+    return service.allObjects(getDeleted: getDeleted)
       .map { $0.toArray() }
   }
   
