@@ -85,7 +85,7 @@ class CountryListViewController: UIViewController {
       let country = sender as? Country {
       
       let vc = segue.destination as! CountryDetailViewController
-      vc.viewModel = CountryDetailViewModel(country: country, countryService: viewModel.service, cityService: CityService())
+      vc.viewModel = CountryDetailViewModel(country: country, countryService: viewModel.service, cityService: CityService(realmProvider: DefaultRealmProvider()))
     }
   }
 }

@@ -8,10 +8,10 @@
 
 import XCTest
 import RxBlocking
+import RxSwift
+import RealmSwift
+import RxRealm
 
-@testable import RxSwift
-@testable import RealmSwift
-@testable import RxRealm
 @testable import RxRxRealm
 
 class ModelObjectServiceTest: XCTestCase {

@@ -15,7 +15,7 @@ struct CountryService: CountryServiceType {
   
   init(realmProvider: RealmProviderType) {
     
-    service = ModelObjectService<Country>(realmProvider: realmProvider)
+    service = ModelObjectService(realmProvider: realmProvider)
   }
   
   @discardableResult
