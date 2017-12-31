@@ -17,7 +17,6 @@ import RxBlocking
 class ModelObjectServiceTest: XCTestCase {
 
   var service: ModelObjectService<ModelObject>!
-  var disposeBag = DisposeBag()
   
   override func setUp() {
     super.setUp()
@@ -27,7 +26,6 @@ class ModelObjectServiceTest: XCTestCase {
   }
   
   override func tearDown() {
-    disposeBag = DisposeBag()
     super.tearDown()
   }
   
@@ -35,11 +33,11 @@ class ModelObjectServiceTest: XCTestCase {
     
     let object = ModelObject()
     
-    XCTAssertNil(object.uid)
-    
     _ = service.create(object: object).toBlocking().materialize()
     
-    XCTAssertNotNil(object.uid, "created object exists")
+    XCTAssertNotNil(object.uid, "created object has uid")
+    XCTAssertNotNil(object.createdAt, "created object has createdAt")
+    XCTAssertNotNil(object.updatedAt, "created object has updatedAt")
   }
   
   func testCreate_keepProperties() {

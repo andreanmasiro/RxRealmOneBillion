@@ -11,7 +11,12 @@ import RealmSwift
 
 struct CountryService: CountryServiceType {
   
-  private let service = ModelObjectService<Country>(realmProvider: DefaultRealmProvider())
+  private let service: ModelObjectService<Country>
+  
+  init(realmProvider: RealmProviderType) {
+    
+    service = ModelObjectService<Country>(realmProvider: realmProvider)
+  }
   
   @discardableResult
   func create(object: Country) -> Observable<Country> {

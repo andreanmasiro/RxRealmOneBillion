@@ -15,7 +15,7 @@ import RealmSwift
 
 class CountryListViewController: UIViewController {
   
-  var viewModel = CountryListViewModel(service: CountryService())
+  var viewModel = CountryListViewModel(service: CountryService(realmProvider: DefaultRealmProvider()))
   let bag = DisposeBag()
   
   var dataSource: RxTableViewSectionedAnimatedDataSource<CountrySection>!
