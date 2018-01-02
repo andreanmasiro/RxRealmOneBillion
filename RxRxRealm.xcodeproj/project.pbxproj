@@ -24,6 +24,9 @@
 		4C4BD0101FF572D200041970 /* TestRealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */; };
 		4C4CCBCF1FFB084700A6DFAF /* CountryListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4CCBCE1FFB084700A6DFAF /* CountryListViewModelTest.swift */; };
 		4C5B4AF11FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */; };
+		4C6869CA1FFC3199002410DC /* CountryDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6869C91FFC3199002410DC /* CountryDetailViewModelTest.swift */; };
+		4C6869CE1FFC3856002410DC /* FakeCountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6869CD1FFC3856002410DC /* FakeCountryService.swift */; };
+		4C6869D01FFC3940002410DC /* FakeCityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6869CF1FFC3940002410DC /* FakeCityService.swift */; };
 		4C74F3D11FEF04DD00E364F6 /* CountryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */; };
 		4C74F3D41FEF058D00E364F6 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D31FEF058D00E364F6 /* CountryService.swift */; };
 		4C74F3DB1FEF166E00E364F6 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3DA1FEF166E00E364F6 /* CountryDetailViewController.swift */; };
@@ -69,6 +72,9 @@
 		4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRealmProvider.swift; sourceTree = "<group>"; };
 		4C4CCBCE1FFB084700A6DFAF /* CountryListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModelTest.swift; sourceTree = "<group>"; };
 		4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObjectJSON.swift; sourceTree = "<group>"; };
+		4C6869C91FFC3199002410DC /* CountryDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModelTest.swift; sourceTree = "<group>"; };
+		4C6869CD1FFC3856002410DC /* FakeCountryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCountryService.swift; sourceTree = "<group>"; };
+		4C6869CF1FFC3940002410DC /* FakeCityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCityService.swift; sourceTree = "<group>"; };
 		4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServiceType.swift; sourceTree = "<group>"; };
 		4C74F3D31FEF058D00E364F6 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
 		4C74F3DA1FEF166E00E364F6 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
@@ -219,7 +225,9 @@
 		4C4BD0021FF56D7D00041970 /* fakes */ = {
 			isa = PBXGroup;
 			children = (
+				4C6869CD1FFC3856002410DC /* FakeCountryService.swift */,
 				4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */,
+				4C6869CF1FFC3940002410DC /* FakeCityService.swift */,
 			);
 			path = fakes;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4CCBCE1FFB084700A6DFAF /* CountryListViewModelTest.swift */,
+				4C6869C91FFC3199002410DC /* CountryDetailViewModelTest.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -556,7 +565,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9A2B411FF8824B00AB43A0 /* CountryServiceTest.swift in Sources */,
+				4C6869D01FFC3940002410DC /* FakeCityService.swift in Sources */,
 				4C4BD0101FF572D200041970 /* TestRealmProvider.swift in Sources */,
+				4C6869CE1FFC3856002410DC /* FakeCountryService.swift in Sources */,
+				4C6869CA1FFC3199002410DC /* CountryDetailViewModelTest.swift in Sources */,
 				4C9A2B431FF88F6D00AB43A0 /* CityServiceTest.swift in Sources */,
 				4C4CCBCF1FFB084700A6DFAF /* CountryListViewModelTest.swift in Sources */,
 				4C4BCFFB1FF56B3C00041970 /* ModelObjectServiceTest.swift in Sources */,

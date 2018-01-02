@@ -19,14 +19,13 @@ import Action
 
 class CountryListViewModelTest: XCTestCase {
   
-  let realmProvider = TestRealmProvider()
-  var countryService: CountryService!
+  var fakeCountryService: CountryServiceType!
   var viewModel: CountryListViewModel!
   
   override func setUp() {
     
-    countryService = CountryService(realmProvider: realmProvider)
-    viewModel = CountryListViewModel(service: countryService)
+    fakeCountryService = FakeCountryService()
+    viewModel = CountryListViewModel(service: fakeCountryService)
 
     super.setUp()
   }
@@ -44,22 +43,20 @@ class CountryListViewModelTest: XCTestCase {
     XCTAssertEqual(country.name, name, "created country name should match with the passed one")
     XCTAssertEqual(country.acronym, acronym, "created country acronym should match with the passed one")
     
-    do {
+    guard case let allCountries?? = try? fakeCountryService.allObjects().toBlocking().first() else {
       
-      let persistedObject = try realmProvider.realm().object(ofType: Country.self, forPrimaryKey: country.uid)
-      
-      XCTAssertNotNil(persistedObject, "object should be persisted in realm")
-      
-    } catch {
-      XCTFail("failed instantiating realm " + error.localizedDescription)
+      XCTFail("failed fetching countries")
+      return
     }
+    
+    XCTAssert(allCountries.contains(country), "country should be persisted in service")
   }
   
   func testAddAction() {
     
-    viewModel.addAction.execute(())
+    _ = viewModel.addAction.execute(()).materialize()
     
-    guard case let objects?? = try? countryService
+    guard case let objects?? = try? fakeCountryService
       .allObjects().toBlocking().first() else {
       XCTFail("failed fetching objects")
       return
@@ -75,42 +72,42 @@ class CountryListViewModelTest: XCTestCase {
     country.name = "some name"
     country.acronym = "ABC"
     
-    _ = countryService.create(object: country).toBlocking().materialize()
+    _ = fakeCountryService.create(object: country).toBlocking().materialize()
     
-    viewModel.deleteAction.execute(country)
+    _ = viewModel.deleteAction.execute(country).toBlocking().materialize()
     
-    XCTAssertNotNil(country.deletedAt)
+    XCTAssertNotNil(country.deletedAt, "deleted country should have deletedAt")
   }
   
   func testSectionedCountries() {
     
-    viewModel.addAction.execute(())
+    _ = viewModel.addAction.execute(()).toBlocking().materialize()
     guard case let section1?? = try? viewModel
       .sectionedCountries.toBlocking().first() else {
         XCTFail("failed getting sectioned countries")
         return
     }
-    guard case let objects1?? = try? countryService.allObjects()
+    guard case let objects1?? = try? fakeCountryService.allObjects()
       .toBlocking().first() else {
         XCTFail("failed fecthing objects from realm")
         return
     }
-    XCTAssertEqual(section1[0].items, objects1, "section's items should be the same as realm's items")
+    XCTAssertEqual(section1[0].items, objects1, "section's items should be the same as service's items")
     XCTAssertEqual(section1[0].model, "")
     
     
-    viewModel.addAction.execute(())
+    _ = viewModel.addAction.execute(()).toBlocking().materialize()
     guard case let section2?? = try? viewModel
       .sectionedCountries.toBlocking().first() else {
         XCTFail("failed getting sectioned countries")
         return
     }
-    guard case let objects2?? = try? countryService.allObjects()
+    guard case let objects2?? = try? fakeCountryService.allObjects()
       .toBlocking().first() else {
         XCTFail("failed fecthing objects from realm")
         return
     }
-    XCTAssertEqual(section2[0].items, objects2, "section's items should be the same as realm's items")
+    XCTAssertEqual(section2[0].items, objects2, "section's items should be the same as service's items")
     XCTAssertEqual(section2[0].model, "")
   }
 }
