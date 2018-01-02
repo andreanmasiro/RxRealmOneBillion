@@ -10,13 +10,13 @@ import XCTest
 import RxBlocking
 import RxSwift
 import RealmSwift
-import RxRealm
 
 @testable import RxRxRealm
 
 class CountryServiceTest: XCTestCase {
 
   var service: CountryService!
+  let realmProvider = TestRealmProvider()
   var dummy: Country {
     let country = Country()
     country.name = "Some country"
@@ -25,7 +25,7 @@ class CountryServiceTest: XCTestCase {
     return country
   }
   override func setUp() {
-    service = CountryService(realmProvider: TestRealmProvider())
+    service = CountryService(realmProvider: realmProvider)
     super.setUp()
   }
   
@@ -38,6 +38,17 @@ class CountryServiceTest: XCTestCase {
     XCTAssertNotNil(country.uid, "created object has uid")
     XCTAssertNotNil(country.createdAt, "created object has createdAt")
     XCTAssertNotNil(country.updatedAt, "created object has updatedAt")
+    XCTAssertNil(country.deletedAt, "created object has no deletedAt")
+    
+    do {
+      let persistedObject = try realmProvider
+        .realm()
+        .object(ofType: Country.self, forPrimaryKey: country.uid)
+      
+      XCTAssertNotNil(persistedObject)
+    } catch {
+      XCTFail("failed instaintiating realm " + error.localizedDescription)
+    }
   }
   
   func testDelete() {

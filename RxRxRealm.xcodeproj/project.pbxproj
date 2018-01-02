@@ -22,6 +22,7 @@
 		4C4BCFFD1FF56BC300041970 /* RealmProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */; };
 		4C4BD0001FF56BF500041970 /* DefaultRealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */; };
 		4C4BD0101FF572D200041970 /* TestRealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */; };
+		4C4CCBCF1FFB084700A6DFAF /* CountryListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4CCBCE1FFB084700A6DFAF /* CountryListViewModelTest.swift */; };
 		4C5B4AF11FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */; };
 		4C74F3D11FEF04DD00E364F6 /* CountryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */; };
 		4C74F3D41FEF058D00E364F6 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74F3D31FEF058D00E364F6 /* CountryService.swift */; };
@@ -66,6 +67,7 @@
 		4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProviderType.swift; sourceTree = "<group>"; };
 		4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRealmProvider.swift; sourceTree = "<group>"; };
 		4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRealmProvider.swift; sourceTree = "<group>"; };
+		4C4CCBCE1FFB084700A6DFAF /* CountryListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModelTest.swift; sourceTree = "<group>"; };
 		4C5B4AF01FF2F96100FB6350 /* ModelObjectJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObjectJSON.swift; sourceTree = "<group>"; };
 		4C74F3D01FEF04DD00E364F6 /* CountryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServiceType.swift; sourceTree = "<group>"; };
 		4C74F3D31FEF058D00E364F6 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				4C4BD0021FF56D7D00041970 /* fakes */,
 				4C4BCFF91FF56B2900041970 /* services */,
+				4C4CCBCD1FFB082A00A6DFAF /* viewmodels */,
 				4C32799F1FED8EA90096C471 /* Info.plist */,
 			);
 			path = RxRxRealmTests;
@@ -219,6 +222,14 @@
 				4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */,
 			);
 			path = fakes;
+			sourceTree = "<group>";
+		};
+		4C4CCBCD1FFB082A00A6DFAF /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				4C4CCBCE1FFB084700A6DFAF /* CountryListViewModelTest.swift */,
+			);
+			path = viewmodels;
 			sourceTree = "<group>";
 		};
 		4C74F3D21FEF057700E364F6 /* countryservice */ = {
@@ -547,6 +558,7 @@
 				4C9A2B411FF8824B00AB43A0 /* CountryServiceTest.swift in Sources */,
 				4C4BD0101FF572D200041970 /* TestRealmProvider.swift in Sources */,
 				4C9A2B431FF88F6D00AB43A0 /* CityServiceTest.swift in Sources */,
+				4C4CCBCF1FFB084700A6DFAF /* CountryListViewModelTest.swift in Sources */,
 				4C4BCFFB1FF56B3C00041970 /* ModelObjectServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
