@@ -16,6 +16,7 @@ typealias CountrySection = AnimatableSectionModel<String, Country>
 
 struct CountryListViewModel {
   
+  let (defaultName, defaultAcronym) = ("Default", "DEF")
   let service: CountryServiceType
   
   init(service: CountryServiceType) {
@@ -38,7 +39,7 @@ struct CountryListViewModel {
   
   var addAction: CocoaAction {
     return CocoaAction { _ in
-      return self.createCountry(name: "Dafuq", acronym: "DAF")
+      return self.createCountry(name: self.defaultName, acronym: self.defaultAcronym)
         .map { _ in }
     }
   }
