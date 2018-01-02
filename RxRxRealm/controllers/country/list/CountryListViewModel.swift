@@ -37,10 +37,9 @@ struct CountryListViewModel {
     return service.create(object: country)
   }
   
-  var addAction: CocoaAction {
-    return CocoaAction { _ in
+  var createAction: Action<Void, Country> {
+    return Action { _ in
       return self.createCountry(name: self.defaultName, acronym: self.defaultAcronym)
-        .map { _ in }
     }
   }
   

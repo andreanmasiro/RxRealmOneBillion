@@ -42,7 +42,7 @@ class CountryListViewController: UIViewController {
       .drive(tableView.rx.items(dataSource: dataSource))
       .disposed(by: bag)
     
-    addButton.rx.action = viewModel.addAction
+    addButton.rx.action = viewModel.createAction.cocoaAction
     
     tableView.rx.modelDeleted(Country.self)
       .bind(to: viewModel.deleteAction.inputs)

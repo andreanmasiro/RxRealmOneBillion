@@ -52,18 +52,22 @@ class CountryListViewModelTest: XCTestCase {
     XCTAssert(allCountries.contains(country), "country should be persisted in service")
   }
   
-  func testAddAction() {
+  func testCreateAction() {
     
-    _ = viewModel.addAction.execute(()).materialize()
-    
-    guard case let objects?? = try? fakeCountryService
-      .allObjects().toBlocking().first() else {
-      XCTFail("failed fetching objects")
+    guard case let country?? = try? viewModel.createAction.execute(()).toBlocking().first() else {
+      XCTFail("failed creating country")
       return
     }
     
-    XCTAssertEqual(objects[0].name, viewModel.defaultName, "created country's name should be default name")
-    XCTAssertEqual(objects[0].acronym, viewModel.defaultAcronym, "created country's acronym should be default acronym")
+    XCTAssertEqual(country.name, viewModel.defaultName, "created country's name should be default name")
+    XCTAssertEqual(country.acronym, viewModel.defaultAcronym, "created country's acronym should be default acronym")
+    
+    guard case let allCountries?? = try? fakeCountryService.allObjects().toBlocking().first() else {
+      XCTFail("failed fetching countries")
+      return
+    }
+    
+    XCTAssert(allCountries.contains(country), "created country should be persisted in service")
   }
   
   func testDeleteAction() {
@@ -81,7 +85,7 @@ class CountryListViewModelTest: XCTestCase {
   
   func testSectionedCountries() {
     
-    _ = viewModel.addAction.execute(()).toBlocking().materialize()
+    _ = viewModel.createAction.execute(()).toBlocking().materialize()
     guard case let section1?? = try? viewModel
       .sectionedCountries.toBlocking().first() else {
         XCTFail("failed getting sectioned countries")
@@ -96,7 +100,7 @@ class CountryListViewModelTest: XCTestCase {
     XCTAssertEqual(section1[0].model, "")
     
     
-    _ = viewModel.addAction.execute(()).toBlocking().materialize()
+    _ = viewModel.createAction.execute(()).toBlocking().materialize()
     guard case let section2?? = try? viewModel
       .sectionedCountries.toBlocking().first() else {
         XCTFail("failed getting sectioned countries")
