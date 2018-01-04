@@ -44,6 +44,7 @@
 		4CC014881FFDBD4F00F20ABC /* FakeFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC014871FFDBD4F00F20ABC /* FakeFetchService.swift */; };
 		4CCD3DFB1FF0109F00D4ADFC /* CityServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFA1FF0109F00D4ADFC /* CityServiceType.swift */; };
 		4CCD3DFE1FF010CF00D4ADFC /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFD1FF010CF00D4ADFC /* CityService.swift */; };
+		4CCDF7FB1FFDC52F00597870 /* FetchServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDF7FA1FFDC52F00597870 /* FetchServiceTest.swift */; };
 		683619284D4E434DA43D818B /* Pods_RxRxRealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED96E354D09519CECE623AD /* Pods_RxRxRealmTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		4CC014871FFDBD4F00F20ABC /* FakeFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFetchService.swift; sourceTree = "<group>"; };
 		4CCD3DFA1FF0109F00D4ADFC /* CityServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceType.swift; sourceTree = "<group>"; };
 		4CCD3DFD1FF010CF00D4ADFC /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
+		4CCDF7FA1FFDC52F00597870 /* FetchServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchServiceTest.swift; sourceTree = "<group>"; };
 		6031487EAE09DA5C1A4266B6 /* Pods-RxRxRealmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRxRealmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxRxRealmTests/Pods-RxRxRealmTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B8636FBDB6BAE72ABD04B08 /* Pods_RxRxRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxRxRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BDE5E80474C619712DB6A40 /* Pods-RxRxRealmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRxRealmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxRxRealmTests/Pods-RxRxRealmTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				4C4BCFFA1FF56B3C00041970 /* ModelObjectServiceTest.swift */,
 				4C9A2B401FF8824A00AB43A0 /* CountryServiceTest.swift */,
 				4C9A2B421FF88F6D00AB43A0 /* CityServiceTest.swift */,
+				4CCDF7FA1FFDC52F00597870 /* FetchServiceTest.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				4C6869CA1FFC3199002410DC /* CountryDetailViewModelTest.swift in Sources */,
 				4C9A2B431FF88F6D00AB43A0 /* CityServiceTest.swift in Sources */,
 				4C4CCBCF1FFB084700A6DFAF /* CountryListViewModelTest.swift in Sources */,
+				4CCDF7FB1FFDC52F00597870 /* FetchServiceTest.swift in Sources */,
 				4CC014821FFDB00700F20ABC /* CityTest.swift in Sources */,
 				4CC014881FFDBD4F00F20ABC /* FakeFetchService.swift in Sources */,
 				4C4BCFFB1FF56B3C00041970 /* ModelObjectServiceTest.swift in Sources */,

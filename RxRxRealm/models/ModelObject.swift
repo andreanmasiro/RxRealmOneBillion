@@ -46,7 +46,8 @@ class ModelObject: Object {
     }
   }
   
-  convenience init(codableRepresentation: Any, fetchService: FetchServiceType) throws {
+  convenience init(codableRepresentation: Any,
+                   fetchService: FetchServiceType) throws {
     
     self.init()
     
