@@ -31,6 +31,21 @@ class Country: ModelObject {
     let name: String
     let acronym: String
     
+    init(uid: String,
+         createdAt: Date,
+         updatedAt: Date,
+         deletedAt: Date?,
+         name: String,
+         acronym: String) {
+      
+      self.uid = uid
+      self.createdAt = createdAt
+      self.updatedAt = updatedAt
+      self.deletedAt = deletedAt
+      self.name = name
+      self.acronym = acronym
+    }
+    
     init(country: Country) {
       
       uid = country.uid

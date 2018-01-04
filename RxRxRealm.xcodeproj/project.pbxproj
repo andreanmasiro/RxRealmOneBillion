@@ -37,6 +37,7 @@
 		4CA865BA1FEEECFB00A12EC6 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865B91FEEECFB00A12EC6 /* City.swift */; };
 		4CA865C21FEEEE0E00A12EC6 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865C11FEEEE0E00A12EC6 /* CityListViewController.swift */; };
 		4CA865C51FEEEE4600A12EC6 /* CityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865C41FEEEE4600A12EC6 /* CityListViewModel.swift */; };
+		4CC014801FFDAB8C00F20ABC /* CountryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0147F1FFDAB8C00F20ABC /* CountryTest.swift */; };
 		4CCD3DFB1FF0109F00D4ADFC /* CityServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFA1FF0109F00D4ADFC /* CityServiceType.swift */; };
 		4CCD3DFE1FF010CF00D4ADFC /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFD1FF010CF00D4ADFC /* CityService.swift */; };
 		683619284D4E434DA43D818B /* Pods_RxRxRealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED96E354D09519CECE623AD /* Pods_RxRxRealmTests.framework */; };
@@ -86,6 +87,7 @@
 		4CA865B91FEEECFB00A12EC6 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		4CA865C11FEEEE0E00A12EC6 /* CityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewController.swift; sourceTree = "<group>"; };
 		4CA865C41FEEEE4600A12EC6 /* CityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewModel.swift; sourceTree = "<group>"; };
+		4CC0147F1FFDAB8C00F20ABC /* CountryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTest.swift; sourceTree = "<group>"; };
 		4CCD3DFA1FF0109F00D4ADFC /* CityServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceType.swift; sourceTree = "<group>"; };
 		4CCD3DFD1FF010CF00D4ADFC /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		6031487EAE09DA5C1A4266B6 /* Pods-RxRxRealmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRxRealmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxRxRealmTests/Pods-RxRxRealmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		4C32799C1FED8EA90096C471 /* RxRxRealmTests */ = {
 			isa = PBXGroup;
 			children = (
+				4CC0147E1FFDAB8100F20ABC /* models */,
 				4C4BD0021FF56D7D00041970 /* fakes */,
 				4C4BCFF91FF56B2900041970 /* services */,
 				4C4CCBCD1FFB082A00A6DFAF /* viewmodels */,
@@ -287,6 +290,14 @@
 				4CA865C41FEEEE4600A12EC6 /* CityListViewModel.swift */,
 			);
 			path = city;
+			sourceTree = "<group>";
+		};
+		4CC0147E1FFDAB8100F20ABC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4CC0147F1FFDAB8C00F20ABC /* CountryTest.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		4CCD3DF91FF0108300D4ADFC /* cityservice */ = {
@@ -572,6 +583,7 @@
 				4C6869D01FFC3940002410DC /* FakeCityService.swift in Sources */,
 				4C4BD0101FF572D200041970 /* TestRealmProvider.swift in Sources */,
 				4C6869CE1FFC3856002410DC /* FakeCountryService.swift in Sources */,
+				4CC014801FFDAB8C00F20ABC /* CountryTest.swift in Sources */,
 				4C6869CA1FFC3199002410DC /* CountryDetailViewModelTest.swift in Sources */,
 				4C9A2B431FF88F6D00AB43A0 /* CityServiceTest.swift in Sources */,
 				4C4CCBCF1FFB084700A6DFAF /* CountryListViewModelTest.swift in Sources */,
