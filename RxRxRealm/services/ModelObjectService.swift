@@ -23,6 +23,10 @@ struct ModelObjectService<T: ModelObject> {
   
   private let realmProvider: RealmProviderType
   
+  init(type: T.Type, realmProvider: RealmProviderType) {
+    self.realmProvider = realmProvider
+  }
+  
   init(realmProvider: RealmProviderType) {
     self.realmProvider = realmProvider
   }

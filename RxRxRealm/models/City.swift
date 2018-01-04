@@ -31,6 +31,21 @@ class City: ModelObject {
     let name: String
     let country_id: String
     
+    init(uid: String,
+         createdAt: Date,
+         updatedAt: Date,
+         deletedAt: Date?,
+         name: String,
+         country: Country) {
+      
+      self.uid = uid
+      self.createdAt = createdAt
+      self.updatedAt = updatedAt
+      self.deletedAt = deletedAt
+      self.name = name
+      self.country_id = country.uid
+    }
+    
     init(city: City) {
       
       uid = city.uid

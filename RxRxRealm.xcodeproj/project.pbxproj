@@ -38,6 +38,10 @@
 		4CA865C21FEEEE0E00A12EC6 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865C11FEEEE0E00A12EC6 /* CityListViewController.swift */; };
 		4CA865C51FEEEE4600A12EC6 /* CityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA865C41FEEEE4600A12EC6 /* CityListViewModel.swift */; };
 		4CC014801FFDAB8C00F20ABC /* CountryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0147F1FFDAB8C00F20ABC /* CountryTest.swift */; };
+		4CC014821FFDB00700F20ABC /* CityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC014811FFDB00600F20ABC /* CityTest.swift */; };
+		4CC014841FFDBB6000F20ABC /* FetchServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC014831FFDBB6000F20ABC /* FetchServiceType.swift */; };
+		4CC014861FFDBC2B00F20ABC /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC014851FFDBC2B00F20ABC /* FetchService.swift */; };
+		4CC014881FFDBD4F00F20ABC /* FakeFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC014871FFDBD4F00F20ABC /* FakeFetchService.swift */; };
 		4CCD3DFB1FF0109F00D4ADFC /* CityServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFA1FF0109F00D4ADFC /* CityServiceType.swift */; };
 		4CCD3DFE1FF010CF00D4ADFC /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3DFD1FF010CF00D4ADFC /* CityService.swift */; };
 		683619284D4E434DA43D818B /* Pods_RxRxRealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED96E354D09519CECE623AD /* Pods_RxRxRealmTests.framework */; };
@@ -88,6 +92,10 @@
 		4CA865C11FEEEE0E00A12EC6 /* CityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewController.swift; sourceTree = "<group>"; };
 		4CA865C41FEEEE4600A12EC6 /* CityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewModel.swift; sourceTree = "<group>"; };
 		4CC0147F1FFDAB8C00F20ABC /* CountryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTest.swift; sourceTree = "<group>"; };
+		4CC014811FFDB00600F20ABC /* CityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTest.swift; sourceTree = "<group>"; };
+		4CC014831FFDBB6000F20ABC /* FetchServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchServiceType.swift; sourceTree = "<group>"; };
+		4CC014851FFDBC2B00F20ABC /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
+		4CC014871FFDBD4F00F20ABC /* FakeFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFetchService.swift; sourceTree = "<group>"; };
 		4CCD3DFA1FF0109F00D4ADFC /* CityServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceType.swift; sourceTree = "<group>"; };
 		4CCD3DFD1FF010CF00D4ADFC /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		6031487EAE09DA5C1A4266B6 /* Pods-RxRxRealmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRxRealmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxRxRealmTests/Pods-RxRxRealmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 		4C3279AD1FED90C20096C471 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				4CC014891FFDBF9000F20ABC /* fetchservice */,
 				4C3279AE1FED90D40096C471 /* ModelObjectService.swift */,
 				4C4BCFFC1FF56BC300041970 /* RealmProviderType.swift */,
 				4C4BCFFF1FF56BF500041970 /* DefaultRealmProvider.swift */,
@@ -234,6 +243,7 @@
 				4C6869CD1FFC3856002410DC /* FakeCountryService.swift */,
 				4C4BD0031FF56D9200041970 /* TestRealmProvider.swift */,
 				4C6869CF1FFC3940002410DC /* FakeCityService.swift */,
+				4CC014871FFDBD4F00F20ABC /* FakeFetchService.swift */,
 			);
 			path = fakes;
 			sourceTree = "<group>";
@@ -296,8 +306,18 @@
 			isa = PBXGroup;
 			children = (
 				4CC0147F1FFDAB8C00F20ABC /* CountryTest.swift */,
+				4CC014811FFDB00600F20ABC /* CityTest.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		4CC014891FFDBF9000F20ABC /* fetchservice */ = {
+			isa = PBXGroup;
+			children = (
+				4CC014831FFDBB6000F20ABC /* FetchServiceType.swift */,
+				4CC014851FFDBC2B00F20ABC /* FetchService.swift */,
+			);
+			path = fetchservice;
 			sourceTree = "<group>";
 		};
 		4CCD3DF91FF0108300D4ADFC /* cityservice */ = {
@@ -557,6 +577,7 @@
 				4C3279AF1FED90D40096C471 /* ModelObjectService.swift in Sources */,
 				4C4BD0001FF56BF500041970 /* DefaultRealmProvider.swift in Sources */,
 				4CA865BA1FEEECFB00A12EC6 /* City.swift in Sources */,
+				4CC014841FFDBB6000F20ABC /* FetchServiceType.swift in Sources */,
 				4CA865C21FEEEE0E00A12EC6 /* CityListViewController.swift in Sources */,
 				4C74F3D41FEF058D00E364F6 /* CountryService.swift in Sources */,
 				4CCD3DFE1FF010CF00D4ADFC /* CityService.swift in Sources */,
@@ -569,6 +590,7 @@
 				4C3279AA1FED8F080096C471 /* ModelObject.swift in Sources */,
 				4C3279891FED8EA90096C471 /* AppDelegate.swift in Sources */,
 				4CA865C51FEEEE4600A12EC6 /* CityListViewModel.swift in Sources */,
+				4CC014861FFDBC2B00F20ABC /* FetchService.swift in Sources */,
 				4C3279B51FED93880096C471 /* CountryListViewModel.swift in Sources */,
 				4C5B4AF11FF2F96100FB6350 /* ModelObjectJSON.swift in Sources */,
 				4C6869D21FFC3F53002410DC /* Action+CocoaActionConvertible.swift in Sources */,
@@ -587,6 +609,8 @@
 				4C6869CA1FFC3199002410DC /* CountryDetailViewModelTest.swift in Sources */,
 				4C9A2B431FF88F6D00AB43A0 /* CityServiceTest.swift in Sources */,
 				4C4CCBCF1FFB084700A6DFAF /* CountryListViewModelTest.swift in Sources */,
+				4CC014821FFDB00700F20ABC /* CityTest.swift in Sources */,
+				4CC014881FFDBD4F00F20ABC /* FakeFetchService.swift in Sources */,
 				4C4BCFFB1FF56B3C00041970 /* ModelObjectServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

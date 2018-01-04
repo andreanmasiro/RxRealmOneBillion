@@ -46,7 +46,7 @@ class ModelObject: Object {
     }
   }
   
-  convenience init(codableRepresentation: Any) throws {
+  convenience init(codableRepresentation: Any, fetchService: FetchServiceType) throws {
     
     self.init()
     
@@ -74,9 +74,9 @@ class ModelObject: Object {
         let typeString = String(key.split(separator: "_")[0])
         let type = try ModelObject.modelType(fromString: typeString)
         
-        let object = try getAssociatedObject(type: type, primaryKey: uid)
+        let object = try fetchService.object(type: type, withUid: uid)
         
-        try self.checkResponds(to: key)
+        try self.checkResponds(to: typeString)
         setValue(object, forKey: typeString)
       } else {
         
@@ -90,17 +90,6 @@ class ModelObject: Object {
     if !self.responds(to: Selector(selectorString)) {
       throw ModelObjectError.invalidProperty(selectorString)
     }
-  }
-  
-  private func getAssociatedObject<T: Object>(type: T.Type, primaryKey: String) throws -> T {
-    
-    let realm = try Realm()
-    guard let object = realm.object(ofType: type, forPrimaryKey: uid) else {
-      
-      throw ModelObjectError.associatedObjectNotFound(uid)
-    }
-    
-    return object
   }
 }
 

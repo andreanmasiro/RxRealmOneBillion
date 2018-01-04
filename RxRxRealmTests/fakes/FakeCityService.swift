@@ -41,3 +41,11 @@ struct FakeCityService: CityServiceType {
     return Observable.just(object)
   }
 }
+
+extension FakeFetchService {
+  
+  func city(uid: String) -> City? {
+    return objects.first { $0.uid == uid }
+  }
+}
+

@@ -36,7 +36,7 @@ class CountryTest: XCTestCase {
       acronym: initData.acronym
     )
     do {
-      let country = try Country(codableRepresentation: codableRepresentation)
+      let country = try Country(codableRepresentation: codableRepresentation, fetchService: FakeFetchService())
       
       XCTAssertEqual(country.uid, codableRepresentation.uid,
                      "country should have same uid as codable representation")
